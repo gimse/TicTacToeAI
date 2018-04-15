@@ -11,7 +11,7 @@ Run the game.py to play
 Numpy is required
 
 ## Running example
-
+<pre>
 Welcome to Tic Tac Toe!
 The computer will go first.
 The computer moved.
@@ -107,7 +107,7 @@ The computer moved.
 The computer has beaten you! You lose.
 Do you want to play again? (yes or no)
 n
-
+</pre>
 ## Authors
 
 * **Håkon Gimse** - *Initial work* - [Gimse](https://github.com/gimse)
