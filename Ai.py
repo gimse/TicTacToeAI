@@ -2,7 +2,7 @@ import numpy as np
 import random
 
 class Ai:
-    def __init__(self,playerLetter = 'X',computerLetter = 'O'):
+    def __init__(self,policy_eps=0,playerLetter = 'X',computerLetter = 'O'):
         try:
             file = 'q.npy'
             self.Q=np.load(file)
@@ -18,6 +18,7 @@ class Ai:
         self.last_action=None
         self.learningrate=0.01
         self.gamma=0.1
+        self.policy_eps=policy_eps
 
     def learn(self,board):
         if self.last_state!=None:
@@ -66,10 +67,10 @@ class Ai:
         if len(actions)==0:
             return None
 
-        #eps=0.1
+        #eps=0.1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change to this val
         eps = 0
         rand=random.random()
-        if rand<eps:
+        if rand<self.policy_eps:
             j=random.randint(0, len(actions)-1)
             return actions[j]
         qa=self.Q[s,actions]
