@@ -115,7 +115,3 @@ n
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 
-## Acknowledgments
-
-* I copied the orginal userinterface from a source a can't trace back to. :/
-
