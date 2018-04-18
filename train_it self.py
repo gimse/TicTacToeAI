@@ -115,7 +115,7 @@ while True:
                 else:
                     turn = 'computer'
         else:
-            # Computer’s turn.
+
             move=ai1.move(theBoard)
 
             makeMove(theBoard, computerLetter, move)

@@ -67,8 +67,6 @@ class Ai:
         if len(actions)==0:
             return None
 
-        #eps=0.1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change to this val
-        eps = 0
         rand=random.random()
         if rand<self.policy_eps:
             j=random.randint(0, len(actions)-1)
