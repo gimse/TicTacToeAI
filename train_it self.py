@@ -77,10 +77,9 @@ def isBoardFull(board):
     return True
 
 
-print('Welcome to Tic Tac Toe!')
 
 ai1 =Ai.Ai(0.1,'X','O')
-ai2 =Ai.Ai(0,1,'O','X')
+ai2 =Ai.Ai(0.1,'O','X')
 
 learningrate=1
 ai1.set_learningrate(learningrate)
