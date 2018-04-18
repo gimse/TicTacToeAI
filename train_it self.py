@@ -93,12 +93,10 @@ while True:
     playerLetter='X'
     computerLetter='O'
     turn = whoGoesFirst()
-    #print('The ' + turn + ' will go first.')
     gameIsPlaying = True
     while gameIsPlaying:
         if turn == 'player':
-            # Player’s turn.
-            #drawBoard(theBoard)
+
             move = ai2.move(theBoard)
 
             makeMove(theBoard, playerLetter, move)
@@ -106,35 +104,31 @@ while True:
             ai1.learn(theBoard)
 
             if isWinner(theBoard, playerLetter):
-                #drawBoard(theBoard)
-                #print('Hooray! You have won the game!')
+
                 ai1.reward(-99)
                 ai2.reward(101)
                 gameIsPlaying = False
             else:
                 if isBoardFull(theBoard):
-                    #drawBoard(theBoard)
-                    #print('The game is a tie!')
+
                     break
                 else:
                     turn = 'computer'
         else:
             # Computer’s turn.
-            move=ai1.move(theBoard)#!!!!!!!!!!!!!!!!!!!!Moves
+            move=ai1.move(theBoard)
 
             makeMove(theBoard, computerLetter, move)
 
             ai2.learn(theBoard)
             if isWinner(theBoard, computerLetter):
-                #drawBoard(theBoard)
-                #print('The computer has beaten you! You lose.')
+
                 ai1.reward(99)
                 ai2.reward(-101)
                 gameIsPlaying = False
             else:
                 if isBoardFull(theBoard):
-                    #drawBoard(theBoard)
-                    #print('The game is a tie!')
+
                     break
                 else:
                     turn = 'player'
