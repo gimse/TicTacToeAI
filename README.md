@@ -6,11 +6,7 @@ Using reinforcement learning to learn a machine to play the game.
 
 Run the game.py to play
 
-### Prerequisites
-
-Numpy is required
-
-## Running example
+## Example
 <pre>
 Welcome to Tic Tac Toe!
 The computer will go first.
@@ -108,6 +104,11 @@ The computer has beaten you! You lose.
 Do you want to play again? (yes or no)
 n
 </pre>
+
+### Prerequisites
+
+Numpy is required
+
 ## Authors
 
 * **Håkon Gimse** - *Initial work* - [Gimse](https://github.com/gimse)
